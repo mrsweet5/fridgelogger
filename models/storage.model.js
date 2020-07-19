@@ -7,6 +7,7 @@ const storageSchema = Schema({
         type: String,
         enum: ["chiller", "freezer", "pantry", "sauces"],
     },
+    name: String,
     quantity: String,
     expiry: Date,
 });

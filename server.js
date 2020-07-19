@@ -47,6 +47,7 @@ server.use(function (req, res, moveOn) {
 });
   //all routes
 server.use("/auth", require("./routes/auth.route"));
+server.use("/", require("./routes/storage.route"));
 
  server.listen(process.env.PORT, () => {
     console.log(`running on PORT ${process.env.PORT}`);
