@@ -1,1 +1,20 @@
-<h2> hello suckers</h2>
+<div class="row">
+            <% storage.forEach(storage => { %>
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                    <a href="/show/<%= storage._id %>"><%= storage.name %></a>
+                    </h5>
+                </div>
+                </div>
+            </div>
+            <% }) %>
+    <div class="col-sm-2">col-sm-2</div>
+    <div class="col-sm-2">col-sm-2
+            <a href = "/location/chiller" li class="list-group-item list-group-item-primary">Chiller</li> </a>
+            <a href = "/location/freezer" li class="list-group-item list-group-item-secondary">Freezer</li></a>
+            <a href = "/location/pantry" li class="list-group-item list-group-item-success">Pantry</li></a>
+            <a href = "/location/sauces" li class="list-group-item list-group-item-danger">Sauces</li></a>
+    </div>
+  </div>

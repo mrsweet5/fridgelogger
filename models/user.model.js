@@ -15,7 +15,12 @@ const userSchema = Schema({
         type: String,
         required: true,
     },
-
+    storage: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Storage",
+        }
+    ]
 });
 
 userSchema.methods.validPassword = function (password) {

@@ -20,7 +20,7 @@ router.post("/register", async (req, res) => {
 
     let savedUser = await user.save();
     if (savedUser) {
-        req.flash("Account created");
+        req.flash("success", "Account created");
         res.redirect("/auth/login");
       }
     } catch (error) {

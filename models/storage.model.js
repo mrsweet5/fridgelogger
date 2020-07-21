@@ -10,6 +10,10 @@ const storageSchema = Schema({
     name: String,
     quantity: String,
     expiry: Date,
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    },
 });
 
 const Storage = mongoose.model("Storage", storageSchema);
