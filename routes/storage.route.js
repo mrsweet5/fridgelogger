@@ -2,6 +2,8 @@ const router = require("express").Router();
 const User = require("../models/user.model")
 const Storage = require("../models/storage.model");
 const isLoggedIn = require("../lib/blockCheck");
+const methodOverride = require('method-override');
+router.use(methodOverride('_method'))
 
 router.get("/", isLoggedIn, async (req, res) => {
   try {
@@ -56,5 +58,42 @@ router.post("/create", (req, res) => {
     console.log(err);
   });
 });
+
+router.delete("/delete/:id", (req, res) => {
+  console.log(req.params.id);
+  Storage.findByIdAndDelete(req.params.id)
+  .then(()=>{
+      res.redirect("/");
+  })
+  .catch((err)=>{
+      console.log(err);
+  });
+})
+
+// GET EDIT
+router.get("/storage/edit/:id", (req, res) => {
+  Storage.findById(req.params.id)
+      .then((storage) => {
+          res.render("storage/edit", {
+              storage
+          })
+      })
+      .catch(err => {
+          console.log(err);
+      })
+})
+
+// POST EDIT
+router.post("/edit/:id", (req, res) => {
+  console.log(req.body);
+  Storage.findByIdAndUpdate(req.params.id, req.body)
+      .then(() => {
+          console.log("completed");
+          res.redirect("/")
+      })
+      .catch(err => {
+          console.log(err);
+      })
+})
 
 module.exports = router;

@@ -1,0 +1,16 @@
+<form action="/edit/<%= storage._id %>" method="post">
+    <div>
+        <label>Location</label>
+        <input name="location" type="radio" value="chiller" /> Chiller
+        <input name="location" type="radio" value="freezer" /> Freezer
+        <input name="location" type="radio" value="pantry" /> Pantry
+        <input name="location" type="radio" value="sauces" /> Sauces
+      </div>
+        <div>
+          <input name="name" type="text" placeholder="<%= storage.name %>" />
+        </div>
+        <div>
+          <input name="quantity" type="text" placeholder="<%= storage.quantity %>" />
+        </div>
+    <button type="submit">Save Edit</button>
+</form>

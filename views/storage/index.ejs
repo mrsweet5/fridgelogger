@@ -1,11 +1,17 @@
+
+<div class="container">
 <div class="row">
             <% storage.forEach(storage => { %>
-            <div class="col-md-6 mb-3">
+            <div class="col-md-6">
                 <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">
                     <a href="/show/<%= storage._id %>"><%= storage.name %></a>
                     </h5>
+                    <form method="POST" action="/delete/<%= storage._id %>?_method=DELETE" style="display:inline">
+                        <button class="btn btn-danger" type="submit">Delete</button>
+                    </form>
+                    <a href="/storage/edit/<%= storage._id %>" class="btn btn-primary">Edit</a>
                 </div>
                 </div>
             </div>
@@ -18,3 +24,4 @@
             <a href = "/location/sauces" li class="list-group-item list-group-item-danger">Sauces</li></a>
     </div>
   </div>
+</div>
