@@ -1,12 +1,15 @@
 
 <div class="container">
 <div class="row">
+    <div class="col-8">
             <% storage.forEach(storage => { %>
-            <div class="col-md-6">
+            <div class="col-12">
                 <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">
-                    <a href="/show/<%= storage._id %>"><%= storage.name %></a>
+                    <%= storage.name %>
+                    Quantity: <%= storage.quantity %>
+                    Date of expiry: <%= storage.expiry %>
                     </h5>
                     <form method="POST" action="/delete/<%= storage._id %>?_method=DELETE" style="display:inline">
                         <button class="btn btn-danger" type="submit">Delete</button>
@@ -16,8 +19,12 @@
                 </div>
             </div>
             <% }) %>
-    <div class="col-sm-2">col-sm-2</div>
-    <div class="col-sm-2">col-sm-2
+        </div>
+    <div class="col-2">
+        <a class="btn btn-danger" href="/create">+</a>
+    </div>
+    
+    <div class="col-2">
             <a href = "/location/chiller" li class="list-group-item list-group-item-primary">Chiller</li> </a>
             <a href = "/location/freezer" li class="list-group-item list-group-item-secondary">Freezer</li></a>
             <a href = "/location/pantry" li class="list-group-item list-group-item-success">Pantry</li></a>
