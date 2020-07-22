@@ -10,7 +10,7 @@ require("dotenv").config();
 
 mongoose.Promise = Promise;
 mongoose
-  .connect(process.env.MONGODBURL, {
+  .connect(process.env.MONGODBLIVE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
