@@ -1,23 +1,21 @@
-
-
 <div class="container createcontainer">
   <form action="/edit/<%= storage._id %>" method="post">
     <div class="form-group row">
       <label for="name" class="col-sm-4 col-form-label" >Item Name</label>
       <div class="col-8">
-        <input type="name" class="form-control" id="name" input name="name" placeholder= <%= storage.name %>>
+        <input type="name" class="form-control" id="name" input name="name" value= "<%= storage.name %>">
       </div>
     </div>
     <div class="form-group row">
       <label for="quantity" class="col-sm-4 col-form-label">Quantity</label>
       <div class="col-8">
-        <input type="quantity" class="form-control" id="inputPassword3" input name="quantity" placeholder=<%= storage.quantity %>>
+        <input type="quantity" class="form-control" id="inputPassword3" input name="quantity" value= "<%= storage.quantity %>">
       </div>
     </div>
     <div class="form-group row">
       <label for="quantity" class="col-sm-4 col-form-label">Date of Expiry</label>
       <div class="col-8">
-        <input type="quantity" class="form-control" id="inputPassword3" input name="expiry" placeholder=<%= storage.expiry %>>
+        <input type="quantity" class="form-control" id="inputPassword3" input name="expiry" value=<%= storage.expiry %>>
       </div>
     </div>
     <fieldset class="form-group">
@@ -25,26 +23,26 @@
         <legend class="col-form-label col-sm-4 pt-0">Location</legend>
         <div class="col-8">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="chiller" checked>
+            <input class="form-check-input" type="radio" name="location" id="gridRadios1" value="chiller" checked>
             <label class="form-check-label" for="gridRadios1" input name="location">
               Chiller
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="freezer">
+            <input class="form-check-input" type="radio" name="location" id="gridRadios2" value="freezer">
             <label class="form-check-label" for="gridRadios2" input name="location">
               Freezer
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="pantry">
-            <label class="form-check-label" for="gridRadios2" input name="location">
+            <input class="form-check-input" type="radio" name="location" id="gridRadios3" value="pantry">
+            <label class="form-check-label" for="gridRadios3" input name="location">
               Pantry
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="sauces">
-            <label class="form-check-label" for="gridRadios2" input name="location">
+            <input class="form-check-input" type="radio" name="location" id="gridRadios4" value="sauces">
+            <label class="form-check-label" for="gridRadios4" input name="location">
               Sauces
             </label>
           </div>
