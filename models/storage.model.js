@@ -9,7 +9,7 @@ const storageSchema = Schema({
     },
     name: String,
     quantity: String,
-    expiry: Date,
+    expiry: String,
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"

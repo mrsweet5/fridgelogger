@@ -1,16 +1,62 @@
-<form action="/edit/<%= storage._id %>" method="post">
-    <div>
-        <label>Location</label>
-        <input name="location" type="radio" value="chiller" /> Chiller
-        <input name="location" type="radio" value="freezer" /> Freezer
-        <input name="location" type="radio" value="pantry" /> Pantry
-        <input name="location" type="radio" value="sauces" /> Sauces
+
+
+<div class="container createcontainer">
+  <form action="/edit/<%= storage._id %>" method="post">
+    <div class="form-group row">
+      <label for="name" class="col-sm-4 col-form-label" >Item Name</label>
+      <div class="col-8">
+        <input type="name" class="form-control" id="name" input name="name" placeholder= <%= storage.name %>>
       </div>
-        <div>
-          <input name="name" type="text" placeholder="<%= storage.name %>" />
+    </div>
+    <div class="form-group row">
+      <label for="quantity" class="col-sm-4 col-form-label">Quantity</label>
+      <div class="col-8">
+        <input type="quantity" class="form-control" id="inputPassword3" input name="quantity" placeholder=<%= storage.quantity %>>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="quantity" class="col-sm-4 col-form-label">Date of Expiry</label>
+      <div class="col-8">
+        <input type="quantity" class="form-control" id="inputPassword3" input name="expiry" placeholder=<%= storage.expiry %>>
+      </div>
+    </div>
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-4 pt-0">Location</legend>
+        <div class="col-8">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="chiller" checked>
+            <label class="form-check-label" for="gridRadios1" input name="location">
+              Chiller
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="freezer">
+            <label class="form-check-label" for="gridRadios2" input name="location">
+              Freezer
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="pantry">
+            <label class="form-check-label" for="gridRadios2" input name="location">
+              Pantry
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="sauces">
+            <label class="form-check-label" for="gridRadios2" input name="location">
+              Sauces
+            </label>
+          </div>
         </div>
-        <div>
-          <input name="quantity" type="text" placeholder="<%= storage.quantity %>" />
-        </div>
-    <button type="submit">Save Edit</button>
-</form>
+      </div>
+    </fieldset>
+    <div class="form-group row">
+      <div class="col-6">
+        <button type="submit" class="btn btn-info">Save Item</button>
+      </div>
+    </div>
+  </form>
+  </div>
+  </div>
+  </div>
