@@ -33,4 +33,4 @@ I have created a fridge logger app that logs the items inside my fridge - in dif
 - Link to search engine so that user can have recommendations on what to cook with food items in fridge
 
 
-[Link To Game](https://fridgelogger1.herokuapp.com/)
+[Link To App](https://fridgelogger1.herokuapp.com/)
