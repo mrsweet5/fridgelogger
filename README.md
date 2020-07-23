@@ -4,7 +4,9 @@
 As someone who cooks occasionally, I always have problems keeping track of items in my fridge. As a result, majority of my food items have to be thrown away as they are forgotten and spoilt.
 
 ### Solution
-I have created a fridge logger app that logs the items inside my fridge - in different compartments such as the freezer, chiller, pantry and sauces with their expiry date. This way, I will be able to know what's in my fridge.
+
+I have created a fridge logger app that logs the items inside my fridge - in different compartments such as the freezer, chiller, pantry and sauces with their expiry date. This way, I will be able to know what’s in my fridge.
+
 ---------------------------------------
 ### Explanation Of Technologies Used
 
