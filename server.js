@@ -8,32 +8,32 @@ const flash = require("connect-flash");
 const checkUser = require("./lib/blockCheck");
 require("dotenv").config();
 
-// mongoose.Promise = Promise;
-// mongoose
-//   .connect(process.env.MONGODBLIVE, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true,
-//   })
-//   .then(() => {
-//     console.log("mongodb is running!");
-//   })
-//   .catch((e) => {
-//     console.log(e);
-//   });
+mongoose.Promise = Promise;
+mongoose
+  .connect(process.env.MONGODBLIVE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then(() => {
+    console.log("mongodb is running!");
+  })
+  .catch((e) => {
+    console.log(e);
+  });
 
-mongoose.connect(
-    process.env.MONGODBURL,
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false,
-    },
-    () => {
-      console.log("MongoDB connected!");
-    }
-  );
+// mongoose.connect(
+//     process.env.MONGODBURL,
+//     {
+//       useNewUrlParser: true,
+//       useUnifiedTopology: true,
+//       useCreateIndex: true,
+//       useFindAndModify: false,
+//     },
+//     () => {
+//       console.log("MongoDB connected!");
+//     }
+//   );
 
 server.use(express.static("public")); //look for static files in public folder
 server.use(express.urlencoded({ extended: true })); //collects form data
