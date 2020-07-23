@@ -40,6 +40,7 @@ router.get("/create", isLoggedIn, (req, res) => {
 
 router.post("/create", (req, res) => {
   console.log (req.body);
+  console.log (req.user);
   let storageData = {
     location: req.body.location,
     name: req.body.name,
